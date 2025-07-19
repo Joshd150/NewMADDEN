@@ -5,19 +5,20 @@ import { createClient, createWeekKey } from "../discord/discord_utils"
 import EventDB from "../db/events_db"
 import { ConfirmedSim } from "../db/events"
 import db from "../db/firebase"
+import { config } from '../config/environment'
 
-if (!process.env.PUBLIC_KEY) {
+if (!config.discord.publicKey) {
   throw new Error("No Public Key passed for interaction verification")
 }
 
-if (!process.env.DISCORD_TOKEN) {
+if (!config.discord.token) {
   throw new Error("No Discord Token passed for interaction verification")
 }
-if (!process.env.APP_ID) {
+if (!config.discord.appId) {
   throw new Error("No App Id passed for interaction verification")
 }
 
-const prodSettings = { publicKey: process.env.PUBLIC_KEY, botToken: process.env.DISCORD_TOKEN, appId: process.env.APP_ID }
+const prodSettings = { publicKey: config.discord.publicKey, botToken: config.discord.token, appId: config.discord.appId }
 
 const prodClient = createClient(prodSettings)
 

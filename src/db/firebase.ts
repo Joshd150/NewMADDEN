@@ -1,19 +1,21 @@
 import { initializeApp, cert } from "firebase-admin/app"
 import { getFirestore } from "firebase-admin/firestore"
 import { readFileSync } from "node:fs";
+import { config } from '../config/environment';
+import { config } from '../config/environment';
 
 function setupFirebase() {
-  if (process.env.FIRESTORE_EMULATOR_HOST) {
+  if (config.database.emulatorHost) {
     initializeApp({ projectId: "dev" })
   }
   // production, use firebase with SA credentials passed from environment or a file
-  else if (process.env.SERVICE_ACCOUNT_FILE) {
-    const serviceAccount = JSON.parse(readFileSync(process.env.SERVICE_ACCOUNT_FILE, 'utf8'))
+  else if (config.database.serviceAccountFile) {
+    const serviceAccount = JSON.parse(readFileSync(config.database.serviceAccountFile, 'utf8'))
     initializeApp({
       credential: cert(serviceAccount)
     })
-  } else if (process.env.SERVICE_ACCOUNT) {
-    const serviceAccount = JSON.parse(process.env.SERVICE_ACCOUNT)
+  } else if (config.database.serviceAccount) {
+    const serviceAccount = JSON.parse(config.database.serviceAccount)
     initializeApp({
       credential: cert(serviceAccount)
     })
