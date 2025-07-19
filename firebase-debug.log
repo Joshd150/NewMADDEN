@@ -1,0 +1,33 @@
+[debug] [2025-07-19T03:03:07.398Z] ----------------------------------------------------------------------
+[debug] [2025-07-19T03:03:07.402Z] Command:       /usr/local/bin/node /home/project/node_modules/.bin/firebase --project dev emulators:start
+[debug] [2025-07-19T03:03:07.403Z] CLI Version:   13.9.0
+[debug] [2025-07-19T03:03:07.403Z] Platform:      linux
+[debug] [2025-07-19T03:03:07.403Z] Node Version:  v20.19.1
+[debug] [2025-07-19T03:03:07.403Z] Time:          Fri Jul 18 2025 22:03:07 GMT-0500 (Central Daylight Time)
+[debug] [2025-07-19T03:03:07.404Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-07-19T03:03:07.408Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2025-07-19T03:03:07.572Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] Failed to authenticate, have you run firebase login?
+[warn] ⚠  emulators: You are not currently authenticated so some features may not work correctly. Please run firebase login to authenticate the CLI. 
+[info] i  emulators: Shutting down emulators. {"metadata":{"emulator":{"name":"hub"},"message":"Shutting down emulators."}}
+[debug] [2025-07-19T03:03:07.761Z] Error: spawn java ENOENT
+    at ChildProcess._handle.onexit (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:56:3373)
+    at https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/blitz.96435430.js:31:295404
+[error] 
+[error] Error: Could not spawn `java -version`. Please make sure Java is installed and on your system PATH.
+[debug] [2025-07-19T03:03:07.770Z] Error: Unknown status code 530
+    at _0x3c20a8 (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/blitz.96435430.js:31:1001993)
+    at _0x50f252._readHeaders (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/blitz.96435430.js:31:1008379)
+    at _0x50f252.execute (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/blitz.96435430.js:31:1006351)
+    at Socket.socketOnData (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:3:6073)
+    at Socket.emit (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:30:11034)
+    at Socket.emit (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:29:5199)
+    at addChunk (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:230:3174)
+    at readableAddChunkPushByteMode (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:230:6158)
+    at Readable.push (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:230:6192)
+    at _0x1024d8.onStreamRead [as onread] (https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3.w-credentialless-staticblitz.com/builtins.97a3df4f.js:216:2625)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-07-19T03:03:07.841Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2025-07-19T03:03:07.841Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
